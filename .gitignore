@@ -1,0 +1,41 @@
+# git ignore files
+*.jpg
+*.jpeg
+# *.png
+*.bmp
+*.tif
+*.tiff
+*.heic
+*.JPG
+*.JPEG
+*.PNG
+*.BMP
+*.TIF
+*.TIFF
+*.HEIC
+*.mp4
+*.mov
+*.MOV
+*.avi
+*.data
+*.json
+*.pt
+*.tar.gz
+*.npy
+*.bin
+*.pickle
+*.lmdb
+*.lmdb-lock
+*.pth
+*.log
+
+# git ignore directories
+__pycache__/
+data-mscoco/
+data-voc/
+data/
+dataset_splits/
+runs/
+
+# git ignore files
+/entropy_imgs.py
