@@ -17,10 +17,10 @@ Accepted at the 31st European Signal Processing Conference (EUSIPCO), September 
 
 ## Requirements
 
-We added the [Dockerfile](./Dockerfile) for an easy execution of our code. To run the docker do the following steps:
-- To build the docker container, navigate to the directory and exectue: `docker build -t pruning:latest .` 
+We added the [Dockerfile](./Dockerfile) for an easy execution of our code. To run the docker, do the following steps:
+- To build the docker container, navigate to the directory and execute: `docker build -t pruning:latest .` 
 - You can run the container by executing: `run_docker.sh` 
-- In the container navigate to `/workspace/` to run a script.
+- In the container, navigate to `/workspace/` to run a script.
 
 
 ## Directory Structure
@@ -49,22 +49,22 @@ We added the [Dockerfile](./Dockerfile) for an easy execution of our code. To ru
 ```
 
 ## Datasets
-We use the CIFAR10, the MS COCO, and the Pascal VOC dataset in our work.
+Our work uses the CIFAR10, the MS COCO, and the Pascal VOC dataset.
 
 ### CIFAR10
-If you execute a trainig on CIFAR10 the first time, the dataset is downloaded to `./data/` automatically.
+If you execute a training on CIFAR10 the first time, the dataset is downloaded to `./data/` automatically.
 
 ### MS COCO
-Place the annotations and images directory of the dataset into the `data-mscoco` folder. Create the sym links `test2017`, `train2017`, and `val2017` to the directorys in the images-folder. 
+Place the annotations and images directory of the dataset into the `data-mscoco` folder. Create the symlinks `test2017`, `train2017`, and `val2017` to the directories in the images folder. 
 
 ### Pascal VOC
-Place the data of the subsets in the corresponding directorys.
+Place the data of the subsets in the corresponding directories.
 
 ## Pre-Trained Model Parameters
 We provide the pre-trained model weights on [Google Drive](https://drive.google.com/drive/folders/1CVX6KaMcl02ySzT42f1fc2Gsdu1DVTGT?usp=sharing). Download the files and put them into the `pretrained_parameters` directory.
 
 ## Model Pruning
-Verify that you prepared your environment and the datasets in the right manner. In [run.sh](./run.sh), we provide execution comands for the different tasks and network architectures. In the file all pruning runs are executed with a pruning sparsity of 0.1 or 0.5. If you want a specific pruning sparsity, you have to change the `--sparsity` parameter. The pruned and fine-tuned model are saved in the [runs](./runs/) directory. The model's final performance is given in the `results.txt` file in the corresponding directory.
+Verify that you prepared your environment and the datasets in the right manner. In [run.sh](./run.sh), we provide execution commands for the different tasks and network architectures. All pruning runs are executed in the file with a pruning sparsity of 0.1 or 0.5. If you want a specific pruning sparsity, you must change the `--sparsity` parameter. The pruned and fine-tuned models are saved in the [runs](./runs/) directory. The `results.txt` file in the corresponding directory gives the model's final performance.
 
 
 ## Citation
